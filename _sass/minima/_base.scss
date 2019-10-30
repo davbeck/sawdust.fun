@@ -260,15 +260,24 @@ table {
   min-height: 100vh;
   margin: auto;
   display: grid;
-  grid-template-columns: 220px 700px;
+  grid-template-columns: 220px auto;
   grid-column-gap: 60px;
   grid-template-rows: auto 1fr;
   grid-row-gap: 40px;
+
+  @include media-query($on-laptop) {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 1fr;
+  }
 }
 
 .site-header {
   padding-top: 30px;
   grid-column-start: 2;
+
+  @include media-query($on-laptop) {
+    grid-column-start: 1;
+  }
 }
 
 nav {
@@ -276,8 +285,23 @@ nav {
   font-size: 24px;
   font-family: 'ddc_hardwarecondensed';
 
+  @include media-query($on-laptop) {
+    text-align: left;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .page-link {
     color: $text-color;
+
+    @include media-query($on-laptop) {
+      margin-right: 15px;
+    }
   }
 
   .current-page-link {
@@ -287,19 +311,43 @@ nav {
   .site-links, .social-links {
     display: flex;
     flex-direction: column;
+
+    @include media-query($on-laptop) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  .site-links {
+    @include media-query($on-laptop) {
+      margin-right: 20px;
+    }
   }
 
   .social-links {
     margin-top: 35px;
 
+    @include media-query($on-laptop) {
+      margin-top: 0px;
+    }
+
     a {
       display: flex;
       justify-content: flex-end;
+
+      @include media-query($on-laptop) {
+        flex-direction: row-reverse;
+      }
 
       .social-icon {
         width: 20px;
         margin-left: 8px;
         text-align: center;
+
+        @include media-query($on-laptop) {
+          margin-left: 0px;
+          margin-right: 8px;
+        }
       }
     }
   }

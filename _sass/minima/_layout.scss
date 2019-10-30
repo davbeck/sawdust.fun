@@ -115,6 +115,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 15px;
+    grid-row-gap: 15px;
+
+    @include media-query($on-palm) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .post-link {
@@ -127,7 +132,10 @@
       align-items: flex-end;
       font-size: 36px;
 
-      &:hover, &:active {
+      @include media-query($on-palm) {
+        margin-bottom: 15px;
+        flex-direction: column;
+        align-items: flex-start;
       }
       
       .post-meta {
@@ -168,6 +176,10 @@
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
+  }
+
+  @include media-query($on-palm) {
+    margin-bottom: 0px;
   }
 }
 
