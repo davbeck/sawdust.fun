@@ -3,7 +3,7 @@ layout: post
 title:  "How to Use Dowel Joinery for Seamless Joints"
 date:   2019-10-28 19:46:16 -0700
 categories: woodworking doweljoinery
-thumnail: /assets/2019-10-28-dowel-jig/thumnail.png
+thumbnail: /assets/2019-10-28-dowel-jig/thumbnail.png
 excerpt: A dowel jig can produce some really clean joints. The Milescraft dowel jig is a very cheap option too quickly and easily make joinery that is completely hidden while still being perfectly strong. At about 2% of the price, it's an excellent alternative to a Festool Domino.
 ---
 
